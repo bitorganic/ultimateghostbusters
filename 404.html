@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=VT323&family=Workbench&display=swap" rel="stylesheet">
+<title>404! - Ultimate Ghostbusters</title>
+<link rel="stylesheet" href="styles/mainpages.css">
+
+</head>
+<body>
+  <div class="content">
+    <div class="navbar">
+      <div class="logo" onclick="bust()"></div>
+      <div style="margin-top: 0px;">
+      <audio id="bustin">
+    <source src="snd/bustin.mp3" type="audio/mpeg">
+      </audio>
+      <a class="navbutton" href="ultimateghostbusters.com/">Home</a>
+      <a class="navbutton" href="ultimateghostbusters.com/">Board Game</a>
+      </div>
+
+    <div class="navhaz"></div>
+    </div>
+
+    <div class="machine">
+    <div class="gb_console">
+    <h1 class="workbench-regular titlefont" id="title">404</h1>
+    </div>
+    </div>
+
+    <div>
+      <p class="syne-mono" style="margin-left: auto; margin-right: auto; text-align: center;">
+        You've found a page that doesn't exist. Good for you!
+      </p>
+      <img src="img/cuttin.gif" style="margin:auto; display:block"/>
+    </div>
+
+    <div class="footer">
+      <p style="font-size: 8pt;">"Ghostbusters" and "Ghost-Design" are registered trademarks of Columbia Pictures Ghost Corps/Sony Pictures.
+        <br>UltimateGhostbusters.com is not affiliated with Sony Pircutes or Ghost Corps!</p>
+    </div>
+
+  </div>
+
+
+  <script>
+  const lines = [
+    "ERROR 404",
+    "ERROR 404",
+    "",
+    "PAGE NOT FOUND!",
+    "PAGE NOT FOUND!",
+    ""
+  ];
+
+  const h1 = document.getElementById("title");
+  let index = 0;
+
+  setInterval(() => {
+    const line = lines[index];
+
+    h1.textContent = line;
+
+    index = (index + 1) % lines.length;
+  }, 380);
+</script>
+<script>
+  function bust() {
+    document.getElementById("bustin").play();
+  }
+</script>
+</body>
+</html>

@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html>
 
-<style>
-  html, body {
-    font-family: serif;
-    background-color: #181818;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  .footer {
-    background-color: #242424;
-    color: #787878;
-    text-align: center;
-    padding: 4px 0;
-    width:100%;
-    bottom: 0;
-    border-top: 1px solid #787878;
-  }
-  .navbar {
-    width: 240px;
-    left: 0;
-    top: 0;
-    position:fixed;
-    min-height: 100vh;
-    height: 100%;
-    background-image: url('img/button_brick.png');
-  }
-  .navhaz {
-    background-image: url('img/haztape_v.png');
-    width: 20px;
-    left: 240px;
-    position:fixed;
-    min-height: 100vh;
-    height: 100%
-  }
+<head>
 
-  .content {
-    margin-left: 260px;
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=VT323&family=Workbench&display=swap" rel="stylesheet">
+<title>Home - Ultimate Ghostbusters</title>
+<link rel="stylesheet" href="styles/mainpages.css">
+
+
+</head>
 <body>
   <div class="content">
     <div class="navbar">
+      <div class="logo" onclick="bust()"></div>
+      <div style="margin-top: 0px;">
+      <audio id="bustin">
+    <source src="snd/bustin.mp3" type="audio/mpeg">
+      </audio>
+      <a class="navbutton" href="ultimateghostbusters.com">Home</a>
+      <a class="navbutton" href="ultimateghostbusters.com">Board Game</a>
+      </div>
+
     <div class="navhaz"></div>
-      
     </div>
 
-    <h1>Ultimate Ghostbusters</h1>
+    <div class="machine">
+    <div class="gb_console">
+    <h1 class="workbench-regular titlefont" id="title">ULTIMATE GHOSTBUSTERS_</h1>
+    </div>
+    </div>
 
-    <h2>We're ready to believe you!</h2>
-
+    <div class="paperbg syne-mono" style="margin-left: auto; margin-right: auto;">
+      <div class="papershadow"></div>
+      <p class="syne-mono" style="margin-top: -20px;">
+        Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id
+        est laborum.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id
+        est laborum.        
+      </p>
+    </div>
 
     <div class="footer">
       <p style="font-size: 8pt;">"Ghostbusters" and "Ghost-Design" are registered trademarks of Columbia Pictures Ghost Corps/Sony Pictures.
@@ -59,5 +70,94 @@
 
   </div>
 
+
+  <script>
+  const lines = [
+    "U",
+    "UL",
+    "ULT",
+    "ULTI",
+    "ULTIM",
+    "ULTIMA",
+    "ULTIMAT",
+    "ULTIMATE",
+    "ULTIMATE ",
+    "ULTIMATE G",
+    "ULTIMATE GH",
+    "ULTIMATE GHO",
+    "ULTIMATE GHOS",
+    "ULTIMATE GHOST",
+    "ULTIMATE GHOSTB",
+    "ULTIMATE GHOSTBU",
+    "ULTIMATE GHOSTBUS",
+    "ULTIMATE GHOSTBUST",
+    "ULTIMATE GHOSTBUSTE",
+    "ULTIMATE GHOSTBUSTER",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS_",
+    "ULTIMATE GHOSTBUSTERS_",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS_",
+    "ULTIMATE GHOSTBUSTERS_",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS",
+    "ULTIMATE GHOSTBUSTERS_",
+    "ULTIMATE GHOSTBUSTERS_",
+    "",
+    "",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "",
+    "",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "",
+    "",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "WE'RE READY TO",
+    "",
+    "",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "BELIEVE YOU!",
+    "",
+    "",
+    "\\",
+    "|",
+    "/",
+    "-",
+    "\\",
+    "|",
+    "/",
+    "-",
+    "",
+    ""
+  ];
+
+  const h1 = document.getElementById("title");
+  let index = 0;
+
+  setInterval(() => {
+    const line = lines[index];
+
+    h1.textContent = line;
+
+    index = (index + 1) % lines.length;
+  }, 190);
+</script>
+<script>
+  function bust() {
+    document.getElementById("bustin").play();
+  }
+</script>
 </body>
 </html>
