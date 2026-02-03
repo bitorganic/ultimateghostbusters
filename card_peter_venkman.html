@@ -48,7 +48,9 @@
             VENKMAN'S</span><br>-->
             <span class="syne-mono" style="font-size: 15px;">
             Slime Blower</span></p>
-          <img id="gear_button_slimeblower" style="width: 80px; height: 80px; margin-top: -14px;" src="img/gear_button_mood_slime_off.png" onclick="swapImage()" />
+          <img id="gear_button" style="width: 80px; height: 80px; margin-top: -14px;" src="img/gear_button_mood_slime_off.png" onclick="swapImage()" />
+          <img id="gear_button_two" style="width: 80px; height: 80px;" src="img/gear_button_genericslimePlusOne_off.png" onclick="swapImageTwo()" />
+          <img id="gear_button_three" style="width: 80px; height: 80px;" src="img/gear_button_genericslimePlusOne_off.png" onclick="swapImageThree()" />
         </div>
 
         <p style="position: absolute; z-index: 0; margin-top: 2px; margin-left: 2px; font-family: Courier New; font-weight: bold; font-size: 11px;">
@@ -348,11 +350,27 @@
 
 <script>
 function swapImage() {
-  var image = document.getElementById('gear_button_slimeblower');
+  var image = document.getElementById('gear_button');
   if (image.src.match("img/gear_button_mood_slime.png")) {
     image.src = "img/gear_button_mood_slime_off.png";
   } else {
     image.src = "img/gear_button_mood_slime.png";
+  }
+}
+function swapImageTwo() {
+  var image = document.getElementById('gear_button_two');
+  if (image.src.match("img/gear_button_genericslimePlusOne.png")) {
+    image.src = "img/gear_button_genericslimePlusOne_off.png";
+  } else {
+    image.src = "img/gear_button_genericslimePlusOne.png";
+  }
+}
+function swapImageThree() {
+  var image = document.getElementById('gear_button_three');
+  if (image.src.match("img/gear_button_genericslimePlusOne.png")) {
+    image.src = "img/gear_button_genericslimePlusOne_off.png";
+  } else {
+    image.src = "img/gear_button_genericslimePlusOne.png";
   }
 }
 </script>
