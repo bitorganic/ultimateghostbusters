@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=VT323&family=Workbench&display=swap" rel="stylesheet">
+<title>Peter Venkman (Player Card) - Ultimate Ghostbusters</title>
+<link rel="stylesheet" href="styles/mainpages.css">
+
+
+</head>
+<body>
+  <div class="content">
+    <div class="navbar" style="z-index: 2;">
+      <div class="logo" onclick="bust()"></div>
+      <div style="margin-top: 0px;">
+      <audio id="bustin">
+    <source src="snd/bustin.mp3" type="audio/mpeg">
+      </audio>
+      <a class="navbutton" href="https://ultimateghostbusters.com/">Home</a>
+      <a class="navbutton" href="https://ultimateghostbusters.com/scenarios">Scenarios</a>
+      <a class="navbutton" href="https://ultimateghostbusters.com/cards">Player Cards</a>
+      </div>
+
+    <div class="navhaz"></div>
+    </div>
+
+    <!--<div class="paperbg syne-mono" style="margin-left: auto; margin-right: auto;">
+      <div class="papershadow"></div>
+      <p class="syne-mono" style="margin-top: -20px;">
+        Information pertaining to the Ghostbusters.
+        <br><br>
+        - Dr. L
+        <br>
+      </p>
+      <img style="margin-top: -12px; margin-left: 20px; width: auto; height: 60px;" src="img/sig_dr_l.png"/>
+      <p style="margin-top: -32px;">X _______________________________________</p>
+    </div>-->
+
+    <br>
+
+    <div class="playercard" style="background-image: url('img/venkmanPlaceholder2.png');">
+        <div class="cardhaz"></div>
+        <div class="cardextra">
+          <p style="margin-top: 4px;"><!--<span class="nameFont" style="font-size: 18px; font-weight: bold;">
+            VENKMAN'S</span><br>-->
+            <span class="syne-mono" style="font-size: 15px;">
+            Slime Blower</span></p>
+          <img id="gear_button_slimeblower" style="width: 80px; height: 80px; margin-top: -14px;" src="img/gear_button_mood_slime_off.png" onclick="swapImage()" />
+        </div>
+
+        <p style="position: absolute; z-index: 0; margin-top: 2px; margin-left: 2px; font-family: Courier New; font-weight: bold; font-size: 11px;">
+          DR. PETER VENKMAN</p>
+
+        <div style="width: 520px; height: 70px; display:flex;">
+            <div class="cardnamebg">
+            <p class="nameFont" style="font-size: 32px;">
+              VENKMAN</p>
+            </div>
+            <img src="img/gblogo_text.png" class="cardlogo">
+            
+                <div class="flexbreaker"></div>
+                <div class="cardabilities">
+                    <!--Level 1-->
+                    <div class="cardabilHeader" style="background: #B6E4FB; background: linear-gradient(#B6E4FB 0%, #FFF 50%, #B6E4FB 100%);">
+                        <p class="cardXPtext">
+                            XP: 0 - 4</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #B6E4FB; background: linear-gradient(#B6E4FB 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            1</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #B6E4FB; background: linear-gradient(#B6E4FB 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        When a Ghost slimes you,
+                        <br>gain 1 XP.
+                      </p>
+                    </div>
+
+                    <!--Level 2-->
+                    <div class="cardabilHeader" style="background: #fcf794; background: linear-gradient(#fcf794 0%, #FFF 50%, #fcf794 100%);">
+                        <p class="cardXPtext">
+                            XP: 5 - 10</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #fcf794; background: linear-gradient(#fcf794 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            2</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #fcf794; background: linear-gradient(#fcf794 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        When a Ghostbuster adjacent to you would get
+                        <br>Slimed, swap places and you get Slimed instead.
+                      </p>
+                    </div>
+
+                    <!--Level 3-->
+                    <div class="cardabilHeader" style="background: #f7b683; background: linear-gradient(#f7b683 0%, #FFF 50%, #f7b683 100%);">
+                        <p class="cardXPtext">
+                            XP: 11 - 18</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #f7b683; background: linear-gradient(#f7b683 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            3</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #f7b683; background: linear-gradient(#f7b683 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 10px; color:black;">
+                        +1 Action
+                      </p>
+                    </div>
+
+                    <!--Level 4-->
+                    <div class="cardabilHeader" style="background: #96cb6e; background: linear-gradient(#96cb6e 0%, #FFF 50%, #96cb6e 100%);">
+                        <p class="cardXPtext">
+                            XP: 19 - 29</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #96cb6e; background: linear-gradient(#96cb6e 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            4</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #96cb6e; background: linear-gradient(#96cb6e 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        Once during your turn, you may take a free
+                        <br>Combat Action against a Ghost that Slimed you.
+                      </p>
+                    </div>
+
+                    <!--Level 5-->
+                    <div class="cardabilHeader" style="background:  #b8b6da; background: linear-gradient(#b8b6da 0%, #FFF 50%, #b8b6da 100%);">
+                        <p class="cardXPtext">
+                            XP: 30+ (Team Bonus)</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #b8b6da; background: linear-gradient(#b8b6da 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            5</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #b8b6da; background: linear-gradient(#b8b6da 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black; font-size:px;">
+                        Ghostbusters may choose to roll a d4 when removing
+                        <br>their own Slime to determine Slime removed.
+                      </p>
+                    </div>
+
+                    <!--EQUIPMENT 1-->
+                    <div class="cardabilHeader" style="background-image: url('../img/haztape_equipment.png');">
+                        <p class="cardXPtext" style="color: rgb(104, 104, 104)">
+                            Equipment I</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #f7b683; background: linear-gradient(#e6e6e6 0%, #FFF 100%); margin-left: 0; width: 300px; height: 60px;">
+                      <img src="img/gearico_slimeblower.png" style="height: calc((100%) - 4px); padding: 2px 2px; display: block; align-items: left; outline: -2px solid red;"/>
+                      <p style="margin-top: -49px; padding-top: 10px; color:black;">
+                        Venkman's Slime Blower
+                      </p>
+                    </div>
+
+                    <!--Level 6-->
+                    <div class="cardabilHeader" style="background: #ff899c; background: linear-gradient(#ff899c 0%, #FFF 50%, #ff899c 100%);">
+                        <p class="cardXPtext">
+                            XP: 31 - ?</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #ff899c; background: linear-gradient(#ff899c 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            6</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #ff899c; background: linear-gradient(#ff899c 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        ---
+                        <br>---
+                      </p>
+                    </div>
+
+                    <!--Level 7-->
+                    <div class="cardabilHeader" style="background: #ca91ff; background: linear-gradient(#ca91ff 0%, #FFF 50%, #ca91ff 100%);">
+                        <p class="cardXPtext">
+                            XP: ? - ?</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #ca91ff; background: linear-gradient(#ca91ff 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            7</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #ca91ff; background: linear-gradient(#ca91ff 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        ---
+                        <br>---
+                      </p>
+                    </div>
+
+                    <!--Level 8-->
+                    <div class="cardabilHeader" style="background: #ca91ff; background: linear-gradient(#9cffd6 0%, #FFF 50%, #9cffd6 100%);">
+                        <p class="cardXPtext">
+                            XP: ? - ?</p>
+                    </div>
+                    <div class="cardabilLevel" style="margin-top: 15px; background: #ca91ff; background: linear-gradient(#9cffd6 0%, #FFF 100%);">
+                        <p class="levelFont">
+                            LEVEL</p>
+                        <p class="levelNum">
+                            8</p>
+                    </div>
+                    <div class="cardabilPerk" style="background: #ca91ff; background: linear-gradient(#9cffd6 0%, #FFF 100%);">
+                      <p style="margin-top: -38px; padding-top: 2px; color:black;">
+                        ---
+                        <br>---
+                      </p>
+                    </div>
+                    
+                    
+
+                    
+
+
+
+
+                    </div>
+                    
+                </div>
+                
+
+        </div>
+
+        <div class="statsHolder">
+        <div class="statTickerHolder" style="margin-left: 0px;">
+        <p class="syne-mono" style="height: 28px; line-height: 28px; margin-top: 0; text-align: center; font-size: 22px;">XP</p>
+        <input type="text" placeholder="0" min="0" value="0" class="statTicker" id="XPCounter"></input>
+        <button type="button" class="spinDown">▼</button>
+        <button type="button" class="spinUp" style="position:absolute;">▲</button>
+        </div>
+
+        <div class="statTickerHolder">
+        <p class="syne-mono" style="height: 28px; line-height: 28px; margin-top: 0; text-align: center; font-size: 22px;">LEVEL</p>
+        <input type="text" placeholder="1" min="1" value="1" class="statTicker" id="LVCounter" readonly style="color:#ffbb00; text-shadow: 0px 0px 4px #ffbb00;"></input>
+        <div style="display: flex; justify-content: center;">
+        <button id="saveButton" style="width: 50px; height: 20px; margin-top: 11px; background-color: rgb(155, 0, 0); border-color: rgb(29, 0, 0); border-radius: 2px; color: white; font-weight: bold; font-size: 12px; font-family: 'Trebuchet MS', Arial, sans-serif;">
+          SAVE
+        </button>
+        </div>
+        </div>
+
+        <div class="statTickerHolder">
+        <p class="syne-mono" style="height: 28px; line-height: 28px; margin-top: 0; text-align: center; font-size: 22px;">RANK</p>
+        <input type="text" placeholder="0" min="0" value="0" class="statTicker" id="RKCounter" readonly style="color: lime; text-shadow: 0px 0px 4px lime; "></input>
+        <div style="display: flex; justify-content: center;">
+        <button id="loadButton" style="width: 50px; height: 20px; margin-top: 11px; background-color: rgb(155, 0, 0); border-color: rgb(29, 0, 0); border-radius: 2px; color: white; font-weight: bold; font-size: 12px; font-family: 'Trebuchet MS', Arial, sans-serif;">
+          LOAD
+        </button>
+        </div>
+        </div>
+
+        </div>
+
+
+
+
+
+
+
+        </div>
+        
+
+    </div>
+
+
+
+    <div style="height:40px;"></div>
+
+    <div class="footer">
+      <p style="font-size: 8pt;">"Ghostbusters" and "Ghost-Design" are registered trademarks of Columbia Pictures Ghost Corps/Sony Pictures.
+        <br>UltimateGhostbusters.com is not affiliated with Sony Pircutes or Ghost Corps!</p>
+    </div>
+
+  </div>
+
+
+<script>
+  function bust() {
+    document.getElementById("bustin").play();
+  }
+</script>
+
+<script>
+  const inputField = document.getElementById('XPCounter');
+  const levelCounter = document.getElementById('LVCounter');
+  const rankCounter = document.getElementById('RKCounter');
+  const spinUp = document.querySelector('.spinUp');
+  const spinDown = document.querySelector('.spinDown');
+
+  // XP THRESHOLDS VVV
+  const levelThresholds = [0, 5, 11, 19, 30]; // Level
+  const rankThresholds = [0, 30]; // Rank
+
+  // calculationz
+  function getValueFromThresholds(xp, thresholds) {
+    for (let i = thresholds.length - 1; i >= 0; i--) {
+      if (xp >= thresholds[i]) {
+        return i + 1; // starts level at 1
+      }
+    }
+    return 1; // base level is 1
+  }
+  function getRankFromThresholds(xp, thresholds) {
+    for (let i = thresholds.length - 1; i >= 0; i--) {
+      if (xp >= thresholds[i]) {
+        return i; // start rank at 0
+      }
+    }
+    return 0;
+  }
+
+  function updateCounters() {
+    const xp = parseInt(inputField.value) || 0;
+    const level = getValueFromThresholds(xp, levelThresholds);
+    const rank = getRankFromThresholds(xp, rankThresholds);
+    
+    levelCounter.value = level;
+    rankCounter.value = rank;
+  }
+
+  spinUp.addEventListener('click', () => {
+    inputField.value = parseInt(inputField.value || 0) + 1;
+    updateCounters();
+  });
+  spinDown.addEventListener('click', () => {
+    const newValue = parseInt(inputField.value || 0) - 1;
+    inputField.value = Math.max(0, newValue); // FINALLY can't tick to negatives
+    updateCounters();
+  });
+
+  // for manual xp updates
+  inputField.addEventListener('input', updateCounters);
+  updateCounters();
+</script>
+
+
+
+<script>
+function swapImage() {
+  var image = document.getElementById('gear_button_slimeblower');
+  if (image.src.match("img/gear_button_mood_slime.png")) {
+    image.src = "img/gear_button_mood_slime_off.png";
+  } else {
+    image.src = "img/gear_button_mood_slime.png";
+  }
+}
+</script>
+
+</body>
+</html>

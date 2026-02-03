@@ -1,3 +1,12 @@
+  @font-face {
+  font-family: 'Nametag';
+  src: url('../font/Nametag.ttf') format('truetype');
+}
+  @font-face {
+  font-family: 'SevenSegment';
+  src: url('../font/SevenSegment.ttf') format('truetype');
+  }
+  
   html, body {
     font-family: serif;
     background-color: #181818;
@@ -33,6 +42,173 @@
     height: 100%;
     top: 0;
   }
+
+  .cardhaz {
+    background-image: url('../img/haztape_norm_v.png');
+    width: 20px;
+    margin-left: -20px;
+    height: 370px;
+    top: 0;
+  }
+  
+  .playercard {
+    margin-left: auto;
+    margin-right: auto;
+    width: 520px;
+    height: 370px;
+    background:darkslategray;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cardnamebg {
+    min-width: 140px;
+    width: 140px;
+    max-width: 140px;
+    height: 54px;
+    background-color: rgb(36, 36, 36);
+    border: 2px solid rgb(101, 101, 101);
+    border-radius: 2px;
+    margin-left: 246px;
+    margin-top: 6px;
+    text-align: center;
+  }
+  
+  .cardlogo {
+    width: auto;
+    height: auto;
+    margin-left: 38px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  .cardabilities {
+    margin-top: 70px;
+    margin-left: -808px;
+    background-color: #ff000000;
+    width: 304px;
+    height: 296px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .cardabilHeader {
+    width: 300px;
+    height: 20px;
+    padding: 0px;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+  }
+
+  .cardabilLevel {
+    width: 32px;
+    height: 38px;
+    border-right: 1px solid rgba(0, 0, 0, 0.288);
+  }
+
+  .cardabilPerk {
+    width: 267px;
+    height: 38px;
+    margin-left: 33px;
+    text-align: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .cardXPtext {
+    line-height: 20px;
+    margin-top: 0px;
+    margin-left: 6px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color:rgba(0, 0, 0, 0.61);
+    font-size: 12px;
+  }
+  
+  .cardextra {
+    text-align: center;
+    width: 100px;
+    height: 370px;
+    position: absolute;
+    margin-left: 524px;
+  }
+
+  .flexbreaker {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(66, 66, 66, 0.39);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.459);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffaa00; 
+}
+
+.statsHolder {
+  margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  display:flex;
+  justify-content:space-evenly;
+  background-color: #3d3d3d;
+  padding-bottom: 6px;
+  padding-top: 1px;
+  border-radius: 4px;
+  background-image: url('../img/machine_counters.png');
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.544);
+}
+
+.statTicker {
+  width: 70px;
+  height: 40px;
+  background-color: black;
+  color:red;
+  text-shadow: 0px 0px 4px red;
+  font-size: 40px;
+  font-family: 'SevenSegment';
+  border: 2px solid rgb(46, 46, 46);
+  border-radius: 2px;
+  text-align: right;
+  margin-top: -22px;
+}
+
+.statTickerHolder {
+  align-items: center;
+  height: 113px;
+  width: 78px;
+  margin-left: 20px;
+}
+
+.spinUp, .spinDown {
+  height: 39px;
+  min-height: 39px;
+  max-height: 39px;
+  width: 39px;
+  min-width: 39px;
+  max-width: 39px;
+  padding: 0 9px;
+  color: #FFF;
+  margin-top: 2px;
+  background-color: rgb(155, 0, 0);
+  border-color: rgb(29, 0, 0);
+  border-radius: 10px;
+}
+
 
   .paperbg {
     
@@ -137,4 +313,30 @@
   font-variation-settings:
     "BLED" 0,
     "SCAN" 0;
+}
+
+.nameFont {
+  font-family: 'Nametag';
+  line-height: 0px;
+  color: red;
+}
+
+.levelFont {
+  font-family: 'Nametag';
+  line-height: 0px;
+  font-size: 10px;
+  margin-top: -15px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.levelNum {
+  font-size: 26px;
+  margin-top: -16px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 29px;
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
